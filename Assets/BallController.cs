@@ -55,6 +55,15 @@ public class BallController : MonoBehaviour
             this.score += 20;
             this.scoreText.GetComponent<Text>().text =score.ToString();
         }
-
+        else if (collision.gameObject.tag == "SmallCloudTag")
+        {
+            this.score += 30;
+            this.scoreText.GetComponent<Text>().text = score.ToString();
+        }
+        else if (collision.gameObject.tag == "LargeCloudTag")
+        {
+            this.score += 40;
+            this.scoreText.GetComponent<Text>().text = score.ToString();
+        }
     }
 }
